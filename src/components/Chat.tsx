@@ -13,7 +13,7 @@ const Chat: React.FC<{ room: string; username: string }> = ({ room, username }) 
   const [socket, setSocket] = useState<WebSocket | null>(null);
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:8080');
+    const ws = new WebSocket('wss://yapper-be-production.up.railway.app/');
     setSocket(ws);
 
     ws.onopen = () => {
